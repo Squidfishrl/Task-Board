@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <title>Todo App</title>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link href="style.css" rel="stylesheet">
+        </head>
+
+        <body>
+                <header>
+                        <div>
+                                <h1><a href="#">Simple Task Board</a></h1>
+                        </div>
+                </header>
+
+                <main>
+                        <form method="POST" action="http://localhost:3000/tasks" target="#">
+                               <input type="text" name="tile" placeholder="Task title">
+                               <textarea id="task-description" name="task-description" rows="8" cols="32" placeholder="Description"></textarea>
+                               <button class="create-task-btn" type="submit">Create</button>
+                        </form>
+
+                        <div class="tasks">
+                                <div>
+                                        <h2 class="task-title">TO DO</h2>
+                                        <div id="todo-col" class="task-col"></div>
+                                </div>
+
+                                <button id="to-in-progress" class="mv-task-btn">></button>
+
+                                <div>
+                                        <h2 class="task-title">In Progress</h2>
+                                        <div id="in-progress-col" class="task-col"></div>
+                                </div>
+
+                                <button id="to-done" class="mv-task-btn">></button>
+
+                                <div>
+                                        <h2 class="task-title">Done</h2>
+                                        <div id="done-col" class="task-col"></div>
+                                </div>
+                        </div>
+                </main>
+
+        
+
+                <script src="index.js" defer></script>
+        </body>
+</html>
+
